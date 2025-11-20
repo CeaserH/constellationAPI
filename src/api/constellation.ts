@@ -14,7 +14,7 @@ export async function fetchConstellationHistory(){
             ];
 
         } catch (err){
-            console.error(`Error fetching ${hour}.json:`, err);
+            console.error(`Error fetching most recent:`, err);
             return [];
         }
 }
