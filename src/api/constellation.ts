@@ -19,14 +19,14 @@ export async function fetchConstellationHistory(): Promise<ConstellationEntry[]>
         const fullUrl = corsProxyUrl + encodeURIComponent(apiurl + query.fileName);
 
         try {
-            const repsonse = await fetch(fullUrl);
+            const response = await fetch(fullUrl);
 
-            if(!repsonse.ok){
-                console.warn(`File ${query.fileName} not available (HTTP Status: ${repsonse.status}). Skipping.`);
+            if(!response.ok){
+                console.warn(`File ${query.fileName} not available (HTTP Status: ${response.status}). Skipping.`);
                 continue;
             }
 
-            const data = await repsonse.json();
+            const data = await response.json();
 
             history.push({
                 hourAgo: query.hour,
