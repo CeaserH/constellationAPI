@@ -16,7 +16,7 @@ export async function fetchConstellationHistory(): Promise<ConstellationEntry[]>
     ];
 
     for(const query of queries){
-        const fullUrl = corsProxyUrl + encodeURIComponent(apiurl + query.fileName);
+        const fullUrl = corsProxyUrl + query.fileName;
 
         try {
             const response = await fetch(fullUrl);
