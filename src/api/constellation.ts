@@ -4,7 +4,7 @@ export interface ConstellationEntry {
 }
 
 const apiurl = "https://a.windbornesystems.com/treasure/";
-const corsProxyUrl = "https://corsproxy.io/?";
+const corsProxyUrl = "https://cors-proxy.fringe.zone/";
 
 
 export async function fetchConstellationHistory(): Promise<ConstellationEntry[]>{
