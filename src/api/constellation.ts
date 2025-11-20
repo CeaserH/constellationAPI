@@ -4,7 +4,7 @@ export async function fetchConstellationHistory(){
 
     for(let i = 0; i <= 23; i++){
         const hour = i.toString().padStart(2, '0');
-        const url = 'https://a.windbornesystems.com/treasures/${hour}.json';
+        const url = `https://a.windbornesystems.com/treasure/${hour}.json`;
 
         try{
             const response = await fetch(url);
@@ -16,7 +16,7 @@ export async function fetchConstellationHistory(){
                 data
             });
         } catch (err){
-            console.error('Error fetching ${hour}.json:', err);
+            console.error(`Error fetching ${hour}.json:`, err);
         }
     }
 
