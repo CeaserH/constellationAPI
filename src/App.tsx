@@ -2,10 +2,16 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
+
+export interface ConstellationEntry {
+  hourAgo: number;
+  data: any;
+}
+
 import { fetchConstellationHistory } from './api/constellation';
 
 function App() {
-  const [history, setHistory] = useState<any[]>([]);
+  const [history, setHistory] = useState<ConstellationEntry[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
