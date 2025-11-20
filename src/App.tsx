@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div style={{ padding: "20px"}}>
-      <h1>Cosntellation Flight History</h1>
+      <h1>Constellation Flight History</h1>
       {history.map((entry) => (
         <div key={entry.hourAgo} style={{ marginBottom: "20px"}}>
           <h3>{entry.hourAgo} hours ago.</h3>
